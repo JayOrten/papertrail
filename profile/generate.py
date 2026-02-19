@@ -20,13 +20,13 @@ except ImportError:
 
 # --- Style ---
 FONT = 'font-family="system-ui, -apple-system, sans-serif"'
-BG = "#0d1117"
-TEXT = "#c9d1d9"
-DIM = "#8b949e"
-ACCENT = "#39d353"
-ACCENT2 = "#26a641"
-BAR_COLOR = "#238636"
-HEATMAP_COLORS = ["#161b22", "#0e4429", "#006d32", "#26a641", "#39d353"]
+BG = "#303446"
+TEXT = "#c6d0f5"
+DIM = "#a5adce"
+ACCENT = "#a6d189"
+ACCENT2 = "#81c8be"
+BAR_COLOR = "#8caaee"
+HEATMAP_COLORS = ["#414559", "#4e6350", "#5a8147", "#80a86b", "#a6d189"]
 CELL_SIZE = 13
 CELL_GAP = 3
 CELL_STEP = CELL_SIZE + CELL_GAP
@@ -174,7 +174,7 @@ def generate_tags(papers: list[Paper], top_n: int = 12) -> str:
         if x + tw > 380:
             x = 20
             y += 30
-        parts.append(f'  <rect x="{x}" y="{y - size + 2}" width="{tw:.0f}" height="{size + 10}" rx="{(size + 10) // 2}" fill="#21262d"/>')
+        parts.append(f'  <rect x="{x}" y="{y - size + 2}" width="{tw:.0f}" height="{size + 10}" rx="{(size + 10) // 2}" fill="#414559"/>')
         parts.append(f'  <text x="{x + 8}" y="{y + 6}" fill="{TEXT}" font-size="{size}" {FONT}>{_esc(tag)} ({count})</text>')
         x += tw + 8
     h = y + 40

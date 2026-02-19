@@ -5,8 +5,8 @@ from datetime import date, timedelta
 
 from papertrail.store import Paper
 
-# GitHub-dark-inspired color scale
-COLORS = ["#161b22", "#0e4429", "#006d32", "#26a641", "#39d353"]
+# Catppuccin Frappe color scale
+COLORS = ["#414559", "#4e6350", "#5a8147", "#80a86b", "#a6d189"]
 CELL_SIZE = 13
 CELL_GAP = 3
 CELL_STEP = CELL_SIZE + CELL_GAP
@@ -93,7 +93,7 @@ def generate_heatmap(papers: list[Paper], year: int | None = None) -> str:
     for m, x in sorted(month_x.items()):
         month_labels_svg.append(
             f'  <text x="{x}" y="{MARGIN_TOP - 8}" '
-            f'fill="#8b949e" font-size="11" font-family="system-ui, -apple-system, sans-serif">'
+            f'fill="#a5adce" font-size="11" font-family="system-ui, -apple-system, sans-serif">'
             f"{MONTH_LABELS[m - 1]}</text>"
         )
 
@@ -104,13 +104,13 @@ def generate_heatmap(papers: list[Paper], year: int | None = None) -> str:
             y = MARGIN_TOP + i * CELL_STEP + CELL_SIZE - 2
             day_labels_svg.append(
                 f'  <text x="{MARGIN_LEFT - 8}" y="{y}" text-anchor="end" '
-                f'fill="#8b949e" font-size="10" font-family="system-ui, -apple-system, sans-serif">'
+                f'fill="#a5adce" font-size="10" font-family="system-ui, -apple-system, sans-serif">'
                 f"{label}</text>"
             )
 
     svg = f"""<svg xmlns="http://www.w3.org/2000/svg" width="{width}" height="{height}">
-  <rect width="100%" height="100%" fill="#0d1117" rx="6"/>
-  <text x="{MARGIN_LEFT}" y="18" fill="#c9d1d9" font-size="14" font-weight="600"
+  <rect width="100%" height="100%" fill="#303446" rx="6"/>
+  <text x="{MARGIN_LEFT}" y="18" fill="#c6d0f5" font-size="14" font-weight="600"
     font-family="system-ui, -apple-system, sans-serif">
     {len(papers)} papers read in {year}</text>
 {"".join(chr(10) + s for s in month_labels_svg)}

@@ -6,12 +6,12 @@ from datetime import date, timedelta
 from papertrail.store import Paper
 
 FONT = 'font-family="system-ui, -apple-system, sans-serif"'
-BG = "#0d1117"
-TEXT = "#c9d1d9"
-DIM = "#8b949e"
-ACCENT = "#39d353"
-ACCENT2 = "#26a641"
-BAR_COLOR = "#238636"
+BG = "#303446"
+TEXT = "#c6d0f5"
+DIM = "#a5adce"
+ACCENT = "#a6d189"
+ACCENT2 = "#81c8be"
+BAR_COLOR = "#8caaee"
 
 
 def generate_streak(papers: list[Paper]) -> str:
@@ -79,7 +79,7 @@ def generate_tags(papers: list[Paper], top_n: int = 12) -> str:
         # Pill background
         tags_svg.append(
             f'  <rect x="{x}" y="{y - size + 2}" width="{text_width:.0f}" '
-            f'height="{size + 10}" rx="{(size + 10) // 2}" fill="#21262d"/>'
+            f'height="{size + 10}" rx="{(size + 10) // 2}" fill="#414559"/>'
         )
         tags_svg.append(
             f'  <text x="{x + 8}" y="{y + 6}" fill="{TEXT}" font-size="{size}" {FONT}>'
