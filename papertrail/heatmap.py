@@ -11,7 +11,7 @@ CELL_SIZE = 13
 CELL_GAP = 3
 CELL_STEP = CELL_SIZE + CELL_GAP
 MARGIN_LEFT = 40
-MARGIN_TOP = 30
+MARGIN_TOP = 50
 
 MONTH_LABELS = [
     "Jan", "Feb", "Mar", "Apr", "May", "Jun",

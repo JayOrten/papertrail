@@ -31,7 +31,7 @@ CELL_SIZE = 13
 CELL_GAP = 3
 CELL_STEP = CELL_SIZE + CELL_GAP
 H_MARGIN_LEFT = 40
-H_MARGIN_TOP = 30
+H_MARGIN_TOP = 50
 MONTH_NAMES = ["Jan", "Feb", "Mar", "Apr", "May", "Jun",
                "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
 DAY_LABELS = ["Mon", "", "Wed", "", "Fri", "", "Sun"]
