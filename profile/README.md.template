@@ -1,0 +1,38 @@
+# {{ username }}
+
+## Papers Read
+
+![Paper Reading Heatmap](images/heatmap.svg)
+
+![Streak](images/streak.svg)
+
+<table>
+<tr>
+<td>
+
+![Monthly](images/monthly.svg)
+
+</td>
+<td>
+
+![Cumulative](images/cumulative.svg)
+
+</td>
+</tr>
+</table>
+
+![Tags](images/tags.svg)
+
+![Top Authors](images/authors.svg)
+
+## Recent Papers
+
+| Date | Title | Rating | Tags |
+|------|-------|--------|------|
+{% for p in recent_papers -%}
+| {{ p.date_read }} | {% if p.url %}[{{ p.title }}]({{ p.url }}){% else %}{{ p.title }}{% endif %} | {{ "⭐" * (p.rating or 0) }} | {{ p.tags | join(", ") }} |
+{% endfor %}
+
+---
+
+*Generated with [papertrail](https://github.com/jayorten/paper-tracker)*

@@ -1,0 +1,26 @@
+[project]
+name = "papertrail"
+version = "0.1.0"
+description = "Academic paper reading tracker with GitHub profile visualization"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "typer>=0.9.0",
+    "pydantic>=2.0",
+    "arxiv>=2.0",
+    "httpx>=0.25",
+    "jinja2>=3.1",
+    "rich>=13.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0",
+]
+
+[project.scripts]
+papertrail = "papertrail.cli:app"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
