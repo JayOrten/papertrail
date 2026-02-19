@@ -18,7 +18,19 @@ from papertrail.config import (
 from papertrail.store import Paper, PaperStore
 
 app = typer.Typer(
-    help="Track academic papers you read and visualize them on your GitHub profile.",
+    help="""Track academic papers you read and visualize them on your GitHub profile.
+
+[bold]Quick add (most common):[/bold]
+  papertrail add --arxiv 1706.03762
+  papertrail add --arxiv 2301.07041 --tags rlhf,alignment --rating 5
+  papertrail add --doi 10.1038/s41586-021-03819-2
+
+[bold]Manual add:[/bold]
+  papertrail add "Paper Title"
+  papertrail add "Paper Title" --authors "Alice, Bob" --tags ml --rating 4
+
+[bold]Then push to your profile:[/bold]
+  papertrail sync""",
     epilog="Config: ~/.config/papertrail/config.toml | Run 'papertrail init' to get started.",
     rich_markup_mode="rich",
     no_args_is_help=True,
